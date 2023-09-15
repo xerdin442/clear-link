@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .hamburger {
-    font-size: 1.6rem;
-    line-height: 1rem;
-  }
   .criss-cross {
     background-color: whitesmoke;
     background-image:  linear-gradient(#e8e7e7 1px, transparent 1px), linear-gradient(to right, #e8e7e7 1px, #f4f4f7 1px);
