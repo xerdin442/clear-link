@@ -11,9 +11,35 @@
     <link rel="shortcut icon" href="images/online-meeting.png" type="image/x-icon">
     <title>ClearLink - Uniting the world, one video call at a time</title>
   </head>
-  <body class="font-poppins">
-    <div class="bg-slate-200 border-y border-gray-300">
-      <ul class="p-3 flex list-none place-content-between items-center">
+  <body class="font-poppins relative">
+    <div id="sidebar" class="flex items-start flex-col space-y-8 px-6 top-0 left-0 z-30 w-64 sm:w-80 h-full box-border bg-slate-100 fixed transform -translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="mt-6 mb-2 flex items-center space-x-1">
+        <span class="shrink-0 block w-6 h-6"><img src="images/online-meeting.png" alt="ClearLink logo"></span>
+        <span class="text-blue-700 font-semibold font-roboto text-lg tracking-wider">ClearLink<span class="text-green-400">.</span></span>
+      </div>
+
+      <span class="flex items-center place-content-between w-full">
+        <p class="text-blue-700 text-base font-semibold">Products</p>
+        <span class="material-symbols-outlined text-blue-700">expand_more</span>
+      </span>
+
+      <span class="flex items-center place-content-between w-full">
+        <p class="text-blue-700 text-base font-semibold">Solutions</p>
+        <span class="material-symbols-outlined text-blue-700">expand_more</span>
+      </span>
+
+      <span class="flex items-center place-content-between w-full">
+        <p class="text-blue-700 text-base font-semibold">Resources</p>
+        <span class="material-symbols-outlined text-blue-700">expand_more</span>
+      </span>
+
+      <p class="text-blue-700 text-base font-semibold">Pricing</p>
+
+      <button class="text-white bg-blue-700 px-4 py-3 rounded-3xl hover:bg-blue-900 text-sm">Start your free trial</button>
+    </div>
+
+    <div class="bg-slate-200 border-y border-gray-300 top-0 sticky z-20">
+      <ul class="p-3 flex list-none items-center place-content-between">
         <li class="flex items-center justify-center space-x-1">
           <span class="shrink-0 block w-6 h-6"><img src="images/online-meeting.png" alt="ClearLink logo"></span>
           <span class="text-blue-700 font-semibold font-roboto text-lg tracking-wider">ClearLink<span class="text-green-400">.</span></span>
@@ -22,40 +48,47 @@
         <li class="hidden"></li>
         <li class="hidden"></li>
         <li class="hidden"></li>
-        <li class="hidden"></li>
-        <li class="hidden"></li>
-        <li><img class="w-7 h-7" src="images/blue-hamburger-menu.png" alt=""></li>
+        <li class="hidden">
+          <button class="text-blue-700 bg-white px-4 py-2 rounded-3xl hover:bg-blue-700 hover:text-white text-xs outline outline-slate-400 hover:outline-none">Talk to sales</button>
+        </li>
+        <li class="hidden">
+          <button class="text-white bg-blue-700 px-4 py-2 rounded-3xl hover:bg-blue-900 text-xs">Start your free trial</button>
+        </li>
+        <li id="menu-toggle" class="cursor-pointer">
+          <img class="w-7 h-7" id="menu-open" src="images/blue-hamburger-menu.png" alt="">
+          <span id="menu-close" class="text-3xl text-blue-700 hidden">&times;</span>
+        </li>
       </ul>
     </div>
-
-    <div class="pt-14 pb-8 grid grid-cols-1 gap-6 mx-auto criss-cross rounded-b-3xl">
+    
+    <div class="pt-14 sm:pt-16 pb-8 md:pb-12 grid grid-cols-1 gap-6 mx-auto criss-cross rounded-b-3xl md:grid-cols-2 md:gap-x-2 md:mr-3">
       <div class="px-3">
         <h1 class="font-bold text-5xl">Uniting the world, one video call at a time</h1>
-        <p class="mt-2 text-slate-500 text-sm">Experience the future of communication with <span class="text-blue-700 font-semibold">ClearLink</span>; where crystal-clear video conferencing meets unparalleled simplicity.</p>
+        <p class="mt-2 text-slate-500 text-sm sm:text-base">Experience the future of communication with <span class="text-blue-700 font-semibold">ClearLink</span>; where crystal-clear video conferencing meets unparalleled simplicity.</p>
 
-        <div class="flex space-x-1 mt-4 items-center text-xs">
+        <div class="flex space-x-1 sm:space-x-2 mt-4 items-center text-xs sm:text-sm">
           <button class="text-white bg-blue-700 px-4 py-3 rounded-3xl hover:bg-blue-900">Start your free trial</button>
-          <span class="material-symbols-outlined text-base text-blue-700">smart_toy</span>
+          <span class="material-symbols-outlined text-base sm:text-lg text-blue-700">smart_toy</span>
           <p class="text-blue-700 hover:underline">Discover AI assistant</p>
         </div>
 
-        <div class="mt-4 flex items-center space-x-3 text-xs ml-3">
+        <div class="mt-4 flex items-center space-x-3 text-sm ml-3">
           <div class="flex -space-x-2 items-center">
-            <img class="w-7 h-7 rounded-full outline outline-2 outline-white" src="images/review-img1.jpg" alt="">
-            <img class="w-7 h-7 rounded-full outline outline-2 outline-white" src="images/review-img2.png" alt="">
-            <img class="w-7 h-7 rounded-full outline outline-2 outline-white" src="images/review-img3.jpg" alt="">
-            <img class="w-7 h-7 rounded-full outline outline-2 outline-white" src="images/review-img4.jpg" alt="">
-            <img class="w-7 h-7 rounded-full outline outline-2 outline-white" src="images/review-img5.jpg" alt="">
+            <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full outline outline-2 outline-white" src="images/review-img1.jpg" alt="">
+            <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full outline outline-2 outline-white" src="images/review-img2.png" alt="">
+            <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full outline outline-2 outline-white" src="images/review-img3.jpg" alt="">
+            <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full outline outline-2 outline-white" src="images/review-img4.jpg" alt="">
+            <img class="w-7 h-7 sm:w-8 sm:h-8 rounded-full outline outline-2 outline-white" src="images/review-img5.jpg" alt="">
           </div>
           
           <div class="flex flex-col space-y-1">
             <div class="flex space-x-2 items-center">
               <div class="flex space-x-1 items-center">
-                <img class="w-3 h-3" src="images/star.png" alt="">
-                <img class="w-3 h-3" src="images/star.png" alt="">
-                <img class="w-3 h-3" src="images/star.png" alt="">
-                <img class="w-3 h-3" src="images/star.png" alt="">
-                <img class="w-3 h-3" src="images/star.png" alt="">
+                <img class="w-3 h-3 sm:w-4 sm:h-4" src="images/star.png" alt="">
+                <img class="w-3 h-3 sm:w-4 sm:h-4" src="images/star.png" alt="">
+                <img class="w-3 h-3 sm:w-4 sm:h-4" src="images/star.png" alt="">
+                <img class="w-3 h-3 sm:w-4 sm:h-4" src="images/star.png" alt="">
+                <img class="w-3 h-3 sm:w-4 sm:h-4" src="images/star.png" alt="">
               </div>
               <p class="font-semibold">5.0</p>
             </div>
@@ -65,31 +98,31 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-3 bg-sky-50 p-4 mx-auto rounded-xl border border-blue-200 drop-shadow-2xl">
-        <img class="w-20 h-20 rounded-lg" src="images/braids-with-glasses.png" alt="">
-        <img class="w-20 h-20 rounded-lg" src="images/avatar3.webp" alt="">
-        <img class="w-20 h-20 rounded-lg" src="images/gold-hair-woman.png" alt="">
-        <img class="w-20 h-20 rounded-lg" src="images/smiling-kid.webp" alt="">
-        <img class="w-20 h-20 rounded-lg" src="images/female-ai-image.jpg" alt="">
-        <img class="w-20 h-20 rounded-lg" src="images/bearded-man.jpeg" alt="">
+      <div class="grid grid-cols-3 gap-3 bg-sky-50 p-4 mx-auto rounded-xl border border-blue-200 drop-shadow-2xl z-10 h-72">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/braids-with-glasses.png" alt="">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/avatar3.webp" alt="">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/gold-hair-woman.png" alt="">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/smiling-kid.webp" alt="">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/female-ai-image.jpg" alt="">
+        <img class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg" src="images/bearded-man.jpeg" alt="">
 
         <div class="col-span-3 text-center text-blue-700">
-          <span class="material-symbols-outlined text-sm mr-1 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">mic</span>
-          <span class="material-symbols-outlined text-sm mr-1 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">videocam</span>
-          <span class="material-symbols-outlined text-sm mr-1 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">desktop_windows</span>
-          <span class="material-symbols-outlined text-sm mr-1 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">sentiment_satisfied</span>
-          <span class="material-symbols-outlined text-sm mr-1 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">chat</span>
-          <span class="material-symbols-outlined text-sm bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">settings</span>
+          <span class="material-symbols-outlined text-sm sm:text-base mr-1 sm:mr-2 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">mic</span>
+          <span class="material-symbols-outlined text-sm sm:text-base mr-1 sm:mr-2 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">videocam</span>
+          <span class="material-symbols-outlined text-sm sm:text-base mr-1 sm:mr-2 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">desktop_windows</span>
+          <span class="material-symbols-outlined text-sm sm:text-base mr-1 sm:mr-2 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">sentiment_satisfied</span>
+          <span class="material-symbols-outlined text-sm sm:text-base mr-1 sm:mr-2 bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">chat</span>
+          <span class="material-symbols-outlined text-sm sm:text-base bg-white py-0.5 px-1.5 rounded-full outline outline-slate-100">settings</span>
         </div>
       </div>
     </div>
 
-    <p class="mt-10 text-xs text-slate-500 px-10 text-center mb-4">Join <span class="text-blue-700 font-semibold">1,500+</span> companies already <br> video conferencing the ClearLink way</p>
+    <p class="mt-10 text-xs sm:text-sm text-slate-500 px-10 text-center mb-4 sm:mb-2">Join 1,500+ companies already video conferencing the ClearLink way</p>
 
     <div class="grid grid-cols-3 gap-x-2 justify-center px-3">
-      <img class="scale-125" src="images/flutterwave-logo.png" alt="">
-      <img class="mt-4 block scale-90" src="images/jumia-logo.png" alt="">
-      <img class="scale-125" src="images/interswitch-logo.png" alt="">
+      <img class="scale-125 sm:scale-105" src="images/flutterwave-logo.png" alt="">
+      <img class="mt-4 block scale-90 sm:scale-75 sm:mt-8" src="images/jumia-logo.png" alt="">
+      <img class="scale-125 sm:scale-110" src="images/interswitch-logo.png" alt="">
       <img class="scale-75" src="images/dangote-logo.png" alt="">
       <img src="images/mtn-logo.png" alt="">
       <img class="scale-75" src="images/alt-school-logo.png" alt="">
@@ -99,33 +132,33 @@
     <h2 class="font-semibold text-xl pl-3 mt-1">Why choose ClearLink?</h2>
     <p class="px-3 mt-2 text-slate-500 text-sm">In a world where connection is everything, ClearLink takes the lead. Our cutting edge video-conferencing technology offers:</p>
 
-    <div class="grid grid-cols-1 max-w-[280px] mx-auto my-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6 mx-5 sm:my-10 sm:mx-7">
       <div>
         <span class="material-symbols-outlined text-lg text-blue-700 bg-slate-50 py-0.5 px-2 rounded-full outline outline-slate-200">videocam</span>
         <h2 class="font-semibold text-base mt-2">Crystal-clear HD video</h2>
         <p class="text-sm text-slate-500 mt-1">No more pixelation or blurriness - just stunning, lifelike clarity that brings your team closer in meetings.</p>
       </div>
 
-      <div class="mt-6">
+      <div>
         <span class="material-symbols-outlined text-lg text-blue-700 bg-slate-50 py-0.5 px-2 rounded-full outline outline-slate-200">graphic_eq</span>
         <h2 class="font-semibold text-base mt-2">Noise-cancelling audio</h2>
         <p class="text-sm text-slate-500 mt-1">Say goodbye to distractions with our advanced audio tech for crisp, interruption-free conersations.</p>
       </div>
 
-      <div class="mt-6">
+      <div>
         <span class="material-symbols-outlined text-lg text-blue-700 bg-slate-50 py-0.5 px-2 rounded-full outline outline-slate-200">calendar_today</span>
         <h2 class="font-semibold text-base mt-2">Scheduling made easy</h2>
         <p class="text-sm text-slate-500 mt-1">Streamline your agenda with ClearLink's intuitive scheduling. Set up meetings, send invitations, and receive reminders in one place.</p>
       </div>
 
-      <div class="mt-6">
+      <div>
         <span class="material-symbols-outlined text-lg text-blue-700 bg-slate-50 py-0.5 px-2 rounded-full outline outline-slate-200">lock_open</span>
         <h2 class="font-semibold text-base mt-2">Bank-grade security</h2>
         <p class="text-sm text-slate-500 mt-1">Your privacy is our priority with end-to-end encryption and other protocols to safeguard your meetings and data from unwanted intruders.</p>
       </div>
     </div>
     
-    <div class="bg-slate-100 py-9 pl-6 flex items-center space-x-1 overflow-x-auto whitespace-nowrap no-scrollbar">
+    <div class="bg-slate-100 pb-8 pt-4 pl-6 mb-10 md:mb-14 flex items-center space-x-1 overflow-x-auto whitespace-nowrap no-scrollbar">
       <div>
         <img src="images/alt-school-logo.png" class="h-8 block -mx-1" alt="">
         <div class="flex space-x-1 items-center mt-2">
@@ -190,52 +223,52 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 px-3 mt-10">
+    <div class="grid grid-cols-1 px-3 gap-y-4 md:grid-cols-2 md:gap-x-6 md:px-6">
       <div>
         <p class="text-xs font-semibold text-blue-700">Support</p>
         <h2 class="font-semibold text-xl mt-1">FAQs</h2>
         <p class="mt-2 text-slate-500 text-sm">Everything you need to know about ClearLink. Can't find the answer you're looking for? <span class="underline hover:text-blue-700">Reach out to the team.</span></p>
       </div>
 
-      <div class="faq-container mt-4">
+      <div class="faq-container grid grid-cols-1 gap-y-4 text-xs md:text-sm">
         <div class="faq-item">
           <span class="flex items-start space-x-2 place-content-between">
-            <p class="text-xs font-semibold">How many participants can join a ClearLink meeting?</p>
-            <span class="font-semibold text-slate-500 border-2 -mt-1 rounded-full px-1.5 scale-75 cursor-pointer toggle-button">+</span>
+            <p class="font-semibold">How many participants can join a ClearLink meeting?</p>
+            <span class="font-semibold text-slate-500 border-2 -mt-1 rounded-full px-1.5 scale-75 text-base cursor-pointer toggle-button">+</span>
           </span>
-          <p class="text-slate-500 text-xs mt-1 hidden panel-content p-2 bg-slate-100 rounded-lg">ClearLink offers flexible meeting options. Depending on your subscription plan, you can host meetings with varying number of participants. Our plans are designed to accommodate small team collaborations and large-scale webinars, ensuring you have the right fit for your needs.</p>
+          <p class="text-slate-500 mt-1 hidden panel-content p-2 bg-slate-100 rounded-lg">ClearLink offers flexible meeting options. Depending on your subscription plan, you can host meetings with varying number of participants. Our plans are designed to accommodate small team collaborations and large-scale webinars, ensuring you have the right fit for your needs.</p>
         </div>
 
-        <div class="faq-item mt-4">
+        <div class="faq-item">
           <span class="flex items-start space-x-2 place-content-between">
-            <p class="text-xs font-semibold">How do I join a ClearLink meeting?</p>
-            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 cursor-pointer toggle-button">+</span>
+            <p class="font-semibold">How do I join a ClearLink meeting?</p>
+            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 text-base cursor-pointer toggle-button">+</span>
           </span>
-          <p class="text-slate-500 text-xs mt-1 mr-4 hidden panel-content p-2 bg-slate-100 rounded-lg">You can join a meeting by clicking the meeting link or going to <span class="underline text-blue-700">join.clearlink.ng</span> and typing in the meeting ID.</p>
+          <p class="text-slate-500 mt-1 mr-4 hidden panel-content p-2 bg-slate-100 rounded-lg">You can join a meeting by clicking the meeting link or going to <span class="underline text-blue-700">join.clearlink.ng</span> and typing in the meeting ID.</p>
         </div>  
         
-        <div class="faq-item mt-4">
+        <div class="faq-item">
           <span class="flex items-start space-x-2 place-content-between">
-            <p class="text-xs font-semibold">Can I use Clearlink on multiple devices?</p>
-            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 cursor-pointer toggle-button">+</span>
+            <p class="font-semibold">Can I use Clearlink on multiple devices?</p>
+            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 text-base cursor-pointer toggle-button">+</span>
           </span>
-          <p class="text-slate-500 text-xs mt-1 mr-4 hidden panel-content"></p>
+          <p class="text-slate-500 mt-1 mr-4 hidden panel-content"></p>
         </div>
 
-        <div class="faq-item mt-4">
+        <div class="faq-item">
           <span class="flex items-start space-x-2 place-content-between">
-            <p class="text-xs font-semibold">Is ClearLink compatible with other video-conferencing platforms?</p>
-            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 cursor-pointer toggle-button">+</span>
+            <p class="font-semibold">Is ClearLink compatible with other video-conferencing platforms?</p>
+            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 text-base cursor-pointer toggle-button">+</span>
           </span>
-          <p class="text-slate-500 text-xs mt-1 mr-4 hidden panel-content"></p>
+          <p class="text-slate-500 mt-1 mr-4 hidden panel-content"></p>
         </div>
 
-        <div class="faq-item mt-4">
+        <div class="faq-item">
           <span class="flex items-start space-x-2 place-content-between">
-            <p class="text-xs font-semibold">Do I need to download any software to use ClearLink?</p>
-            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 scale-75 cursor-pointer toggle-button">+</span>
+            <p class="font-semibold">Do I need to download any software to use ClearLink?</p>
+            <span class="font-semibold text-slate-500 -mt-1 border-2 rounded-full px-1.5 text-base scale-75 cursor-pointer toggle-button">+</span>
           </span>
-          <p class="text-slate-500 text-xs mt-1 mr-4 hidden panel-content"></p>
+          <p class="text-slate-500 mt-1 mr-4 hidden panel-content"></p>
         </div>
       </div>
     </div>
@@ -270,8 +303,68 @@
       </div>
     </div>
 
-    <div class="mt-20"></div>
+    <div class="bg-slate-100 grid grid-cols-2 px-3 mt-10 pt-10">
+      <div class="col-span-2">
+        <span class="flex items-center space-x-1">
+          <img src="images/online-meeting.png" class="w-6 h-6s" alt="">
+          <p class="font-roboto font-semibold text-lg tracking-wider text-blue-700">ClearLink<span class="text-green-400">.</span></p>
+        </span>
+        <p class="text-slate-500 text-xs mt-3">Clearlink is your gateway to effortless, high-quality video conferencing. Join us in shaping the future of communication!</p>
+      </div>
 
+      <div class="mt-4 ml-1">
+        <p class="text-sm text-blue-700 font-semibold">Product</p>
+        <p class="text-xs text-slate-500 mt-1">Overview</p>
+        <p class="text-xs text-slate-500 mt-1">Features</p>
+        <p class="text-xs text-slate-500 mt-1">Solutions</p>
+        <p class="text-xs text-slate-500 mt-1">Tutorials</p>
+        <p class="text-xs text-slate-500 mt-1">Pricing</p>
+      </div>
+
+      <div class="mt-4 text-right mr-6">
+        <p class="text-sm text-blue-700 font-semibold">Company</p>
+        <p class="text-xs text-slate-500 mt-1">About us</p>
+        <p class="text-xs text-slate-500 mt-1">Careers</p>
+        <p class="text-xs text-slate-500 mt-1">Press</p>
+        <p class="text-xs text-slate-500 mt-1">News</p>
+        <p class="text-xs text-slate-500 mt-1">Contact</p>
+      </div>
+
+      <div class="mt-4 ml-1">
+        <p class="text-sm text-blue-700 font-semibold">Resources</p>
+        <p class="text-xs text-slate-500 mt-1">Blog</p>
+        <p class="text-xs text-slate-500 mt-1">Events</p>
+        <p class="text-xs text-slate-500 mt-1">Help centre</p>
+        <p class="text-xs text-slate-500 mt-1">Community</p>
+        <p class="text-xs text-slate-500 mt-1">Support</p>
+      </div>
+
+      <div class="mt-4 text-right mr-6">
+        <p class="text-sm text-blue-700 font-semibold">Legal</p>
+        <p class="text-xs text-slate-500 mt-1">Terms</p>
+        <p class="text-xs text-slate-500 mt-1">Privacy</p>
+        <p class="text-xs text-slate-500 mt-1">Cookies</p>
+        <p class="text-xs text-slate-500 mt-1">Licenses</p>
+      </div>
+
+      <div class="my-5 ml-1">
+        <p class="text-xs text-blue-700 font-semibold mb-2">Get the app</p>
+        <img src="images/app-store-download.png" class="-ml-7 h-20" alt="">
+      </div>
+    </div>
+
+    <div class="bg-slate-100 pl-5 grid grid-cols-1-">
+      <div class="flex items-center space-x-3">
+        <img class="w-5 h-5 opacity-80" src="images/linkedin-logo.png" alt="">
+        <img class="w-5 h-5 opacity-80" src="images/twitter-logo-filled.png" alt="">
+        <img class="w-5 h-5 opacity-80" src="images/facebook-circle-b&w.png" alt="">
+        <img class="w-5 h-5 opacity-80" src="images/instagram.png" alt="">
+        <img class="w-5 h-5 opacity-80" src="images/github.png" alt="">
+        <img class="w-6 h-6 opacity-80" src="images/youtube-black-and-white.png" alt="">
+      </div>
+
+      <span class="text-xs text-slate-500 my-6 text-center">&copy; 2023 ClearLink. All rights reserved.</span>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
