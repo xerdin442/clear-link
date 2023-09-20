@@ -1,3 +1,4 @@
+//FAQs accordion
 document.querySelector('.faq-container').addEventListener('click', function (event) {
     if (event.target.classList.contains('toggle-button')) {
         const button = event.target;
@@ -8,7 +9,7 @@ document.querySelector('.faq-container').addEventListener('click', function (eve
     }
 });
 
-
+//Sidebar
 const menuToggle = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
 const menuOpenIcon = document.getElementById('menu-open');
